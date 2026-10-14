@@ -1,0 +1,12 @@
+<!-- Vinculación bidireccional modelo/vista: [(ngModel)] acepta un signal escribible -->
+<label>Nombre: <input type="text" [(ngModel)]="nombre"></label> <br>
+<label>Apellidos: <input type="text" [(ngModel)]="apellidos"></label> <br>
+
+<!-- Manejo de eventos -->
+<button (click)="generarBullshit()">Generar bullshit</button>
+
+<!-- Vinculación modelo -> vista: los signals se leen llamándolos -->
+<div class="tarjeta">
+  <h2>{{ nombreCompleto() }}</h2>
+  <h3>{{ bullshit() }}</h3>
+</div>
